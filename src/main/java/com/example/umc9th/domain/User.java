@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name = "USER")
+@Table(name = "users")
 @Getter
 @Builder
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
@@ -35,9 +35,11 @@ public class User {
     private String phone;
 
     @Column(nullable = false)
+    @Builder.Default
     private Boolean isPhoneVerify = false;
 
     @Column(nullable = false)
+    @Builder.Default
     private Integer point = 0;
 
     @Column(length = 10)
@@ -52,6 +54,7 @@ public class User {
     private String favFood;
 
     @Column(nullable = false)
+    @Builder.Default
     private Boolean isDeleted = false;
 
     @CreationTimestamp

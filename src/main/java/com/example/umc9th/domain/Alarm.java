@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name = "ALARM")
+@Table(name = "alarms")
 @Getter
 @Builder
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
@@ -24,6 +24,7 @@ public class Alarm {
     private String title;
 
     @Column(nullable = false)
+    @Builder.Default
     private Boolean active = false;
 
     @CreationTimestamp

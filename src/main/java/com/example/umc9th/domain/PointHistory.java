@@ -7,7 +7,7 @@ import org.hibernate.annotations.CreationTimestamp;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "POINTHISTORY")
+@Table(name = "point_history")
 @Getter
 @Builder
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
@@ -35,11 +35,14 @@ public class PointHistory {
     private LocalDateTime receivedAt;
 
     @Column(nullable = false)
+    @Builder.Default
     private Boolean isWithdraw = false;
 
     @Column(nullable = false)
+    @Builder.Default
     private Integer plusPoint = 0;
 
     @Column(nullable = false)
+    @Builder.Default
     private Integer minusPoint = 0;
 }

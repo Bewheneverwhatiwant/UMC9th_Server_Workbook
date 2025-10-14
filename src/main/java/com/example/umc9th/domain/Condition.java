@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name = "CONDITION")
+@Table(name = "conditions")
 @Getter
 @Builder
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
@@ -27,6 +27,7 @@ public class Condition {
     private String content;
 
     @Column(nullable = false)
+    @Builder.Default
     private Boolean isEssential = false;
 
     @CreationTimestamp

@@ -7,7 +7,7 @@ import org.hibernate.annotations.CreationTimestamp;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "USER_MISSION")
+@Table(name = "user_mission")
 @Getter
 @Builder
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
@@ -27,6 +27,7 @@ public class UserMission {
     private Mission mission;
 
     @Column(nullable = false)
+    @Builder.Default
     private Boolean isComplete = false;
 
     @CreationTimestamp

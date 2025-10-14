@@ -6,7 +6,7 @@ import lombok.*;
 import java.time.LocalDate;
 
 @Entity
-@Table(name = "RESTAURANT_MISSION")
+@Table(name = "restaurant_mission")
 @Getter
 @Builder
 @NoArgsConstructor(access = AccessLevel.PROTECTED)

@@ -7,7 +7,7 @@ import org.hibernate.annotations.CreationTimestamp;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "CONDITION_AGREE")
+@Table(name = "condition_agree")
 @Getter
 @Builder
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
@@ -19,11 +19,11 @@ public class ConditionAgree {
     private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_id", nullable = false)
+    @JoinColumn(name = "users_id", nullable = false)
     private User user;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "condition_id", nullable = false)
+    @JoinColumn(name = "conditions_id", nullable = false)
     private Condition condition;
 
     @CreationTimestamp

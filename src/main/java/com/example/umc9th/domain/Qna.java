@@ -7,7 +7,7 @@ import org.hibernate.annotations.CreationTimestamp;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "QNA")
+@Table(name = "qna")
 @Getter
 @Builder
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
@@ -43,6 +43,7 @@ public class Qna {
     private LocalDateTime createdAt;
 
     @Column(nullable = false, length = 20)
+    @Builder.Default
     private String status = "PENDING";
 
     @Column(columnDefinition = "TEXT")

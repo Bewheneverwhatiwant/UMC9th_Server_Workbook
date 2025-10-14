@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name = "RESTAURANT")
+@Table(name = "restaurants")
 @Getter
 @Builder
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
@@ -32,7 +32,8 @@ public class Restaurant {
     @Column(columnDefinition = "TEXT")
     private String address;
 
-    @Column(nullable = false)
+    @Column(name = "rating", nullable = false)
+    @Builder.Default
     private Integer rank = 0;
 
     @Column(length = 100)

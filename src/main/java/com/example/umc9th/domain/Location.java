@@ -8,7 +8,7 @@ import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "LOCATION")
+@Table(name = "locations")
 @Getter
 @Builder
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
@@ -20,7 +20,7 @@ public class Location {
     private Long id;
 
     @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "restaurant_id", nullable = false, unique = true)
+    @JoinColumn(name = "restaurants_id", nullable = false, unique = true)
     private Restaurant restaurant;
 
     @Column(nullable = false, precision = 10, scale = 7)
